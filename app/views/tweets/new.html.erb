@@ -3,7 +3,7 @@
     <h3>投稿する</h3>
     <%= form_with(model: @tweet, local: true) do |form| %>
       <%= form.text_field :name, placeholder: "料理名" %>
-      <%= form.file_field :image %>
+      <%= form.text_field :image, placeholder: "料理写真URL" %>
       <%= form.collection_select(:category_id, Category.all, :id, :name, {}) %>
       <%= form.text_area :material, placeholder: "材料", rows: "5" %>
       <%= form.text_area :make, placeholder: "料理方法", rows: "10" %>

@@ -1,7 +1,6 @@
 class Tweet < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
-  has_one_attached :image
 
   validates :name, presence: true
   validates :material, presence: true
